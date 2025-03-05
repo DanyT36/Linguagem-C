@@ -1,0 +1,20 @@
+#include<stdio.h>
+#include<stdbool.h>
+
+int main()
+{
+	double total_compra;
+	bool tem_desconto;
+	
+	printf("\nDigite o total da compra:");
+	scanf("%lf", &total_compra);
+	
+	printf("\nTem desconto disponivel? Digite 1 para sim ou 0 para nao:");
+	scanf("%d", &tem_desconto);
+	
+	float valor_final = (tem_desconto) ? (total_compra * 0.9) : total_compra;
+	
+	printf("\nO valor final da compra foi:%.2lf", valor_final);
+	
+	return 0;
+}
