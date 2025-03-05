@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int main()
+{
+    int n;
+    int soma = 0;
+
+    printf("\nDigite numeros inteiros (digite 0 para sair): ");
+
+    while(1)
+    {
+        printf("\n Digite um numero:");
+        scanf("%d", &n);
+
+        if( n == 0)
+        {
+            break;
+        }
+
+        if (n < 0)
+        {
+            continue;
+        }
+        soma = soma + n;
+    }
+    printf("\n A soma dos numeros digitados foi %d", soma);
+    
+    return 0;
+}
