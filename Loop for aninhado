@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main()
+{
+    int i, j, n, soma = 0;
+    printf("\nDigite um numero: ");
+    scanf("%d", &n);
+
+    for(i = 1; i <= n; i++)
+    {
+        for(j =1; j <=n ; j++);
+        {
+            if (i == n && j == n)
+                printf("%d*%d =",i, j);
+            else
+                printf("%d*%d +",i, j);
+            soma = soma + (i * j);
+        }
+    }
+    printf("%d\n", soma);
+
+    return 0;
+}
