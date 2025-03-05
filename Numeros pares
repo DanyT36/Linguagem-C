@@ -1,0 +1,47 @@
+#include <stdio.h>
+#include <stdbool.h>
+#include <ctype.h>
+
+bool verificar_par (int numero)
+{
+   if (numero % 2 == 0)
+   {
+      return true;
+   }
+   else 
+   {
+    return false;
+   }
+}
+
+
+int main()
+{
+   int numero;
+   char continuar;
+
+   do
+   {
+
+   printf ("\nDigite um numero inteiro: ");
+   scanf("%d", &numero);
+ 
+   if (verificar_par(numero)) 
+   {
+      printf("\nNumero %d eh Par!",numero);
+   }
+   else
+   {
+      printf("\nNumero %d eh Impar!", numero);
+   }
+
+    while (getchar() != '\n');
+    
+    printf("\nDeseja continuar (S/N)?:");
+    scanf(" %c", &continuar);
+    continuar = toupper (continuar);
+
+   } while (continuar == 'S');
+
+    return 0;
+}
